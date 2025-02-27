@@ -1,0 +1,154 @@
+/* ============================= */
+/*       STYLE GLOBAL            */
+/* ============================= */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================= */
+/*       CARROUSEL               */
+/* ============================= */
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    max-width: 1000px;
+    scroll-behavior: smooth;
+}
+
+/* Article content flex container */
+.carousel-item {
+    display: flex;
+    flex-direction: row;  /* Utilisation de flexbox pour mettre l'image et le texte côte à côte */
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 350px; /* Réduit la largeur de l'élément */
+    margin-right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+/* Article text container */
+.article-text {
+    flex: 1;  /* Prend le reste de l'espace disponible */
+    margin-left: 15px;  /* Espacement entre l'image et le texte */
+}
+
+/* Taille de l'image */
+.article-image-container {
+    width: 50px;  /* Petite taille pour l'image */
+    height: 50px;
+    overflow: hidden;  /* Cache tout excédent de l'image qui dépasse */
+    border-radius: 8px;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Garantit que l'image couvre son conteneur sans déformation */
+    display: block;
+    border-radius: 8px;
+}
+
+/* ============================= */
+/*       BOUTON AJOUT ARTICLE    */
+/* ============================= */
+
+.add-article-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.add-article-btn:hover {
+    background-color: #2980b9;
+}
+
+/* ============================= */
+/*     STYLE DES BOUTONS         */
+/* ============================= */
+
+.article-buttons {
+    margin-top: 10px;
+}
+
+.article-buttons a,
+.article-buttons button {
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.article-buttons .blue { background-color: #3498db; color: white; }
+.article-buttons .blue:hover { background-color: #2980b9; }
+
+.article-buttons .yellow { background-color: #f1c40f; color: white; }
+.article-buttons .yellow:hover { background-color: #f39c12; }
+
+.article-buttons .red { background-color: #e74c3c; color: white; }
+.article-buttons .red:hover { background-color: #c0392b; }
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Flèches du carrousel */
+.prev, .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* ============================= */
+/* STYLE DE LA MINIATURE DE L'IMAGE */
+/* ============================= */
+
+.article-image-miniature {
+    width: 100px; /* Taille réduite de l'image */
+    height: auto; /* Conserver les proportions */
+    margin: 10px auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
